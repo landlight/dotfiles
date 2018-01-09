@@ -110,13 +110,13 @@ There's a lot of stuff that requires admin access via `sudo`, so be warned that 
 #### Ubuntu
 
 ```sh
-bash -c "$(wget -qO- https://github.com/austinrivas/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(wget -qO- https://raw.github.com/austinrivas/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 #### macOS
 
 ```sh
-bash -c "$(curl -fsSL https://github.com/austinrivas/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.github.com/austinrivas/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ## Aliases and Functions
