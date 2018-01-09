@@ -143,14 +143,10 @@ SVN repos display as **[rev1:rev2]** where rev1 and rev2 are:
 **rev1** last changed revision  
 **rev2** revision
 
-Check it out:
-
-![My awesome bash prompt](http://farm8.staticflickr.com/7142/6754488927_563dd73553_b.jpg)
-
 ## Inspiration
 <https://github.com/gf3/dotfiles>  
 <https://github.com/mathiasbynens/dotfiles>  
-(and 15+ years of accumulated crap)
+<https://github.com/cowboy/dotfiles>
 
 ## License
 Copyright (c) 2017 Austin Rivas
