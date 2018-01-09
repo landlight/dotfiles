@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 [[ "$1" == "source" ]] || \
 
-echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
+echo 'Dotfiles - Austin Rivas - http://austinrivas.com/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
 Usage: $(basename "$0")
 
 See the README for documentation.
-https://github.com/cowboy/dotfiles
+https://github.com/austinrivas/dotfiles
 
-Copyright (c) 2014 "Cowboy" Ben Alman
+Copyright (c) 2017 Austin Rivas
 Licensed under the MIT license.
-http://benalman.com/about/license/
 HELP
 exit; fi
 
