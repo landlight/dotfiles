@@ -98,9 +98,9 @@ if is_ubuntu_desktop; then
     libav-tools x11-xserver-utils xdotool wininfo wmctrl python-gobject python-cairo xdg-utils yad
     silentcast
   )
-  
+
   # Install Ubuntu Make for IDE support
-  add_ppa ppa:ubuntu-deskto/ubuntu-make
+  add_ppa ppa:ubuntu-desktop/ubuntu-make
   apt_packages+=(ubuntu-make)
 
   # Misc
