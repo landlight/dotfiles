@@ -8,7 +8,7 @@ function install_docker() {
        $(lsb_release -cs) \
        stable"
     sudo apt update
-    sudo apt install docker-ce
+    sudo apt install docker-ce docker-compose
 }
 
 # Run docker as non-root user
