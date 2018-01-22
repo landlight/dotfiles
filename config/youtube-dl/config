@@ -1,0 +1,4 @@
+# youtube-dl config
+
+# save files to media drive
+-o /media/austin/DATA/music/%(title)s.%(ext)s
