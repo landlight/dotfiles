@@ -118,6 +118,7 @@ if is_ubuntu_desktop; then
     vlc
     # https://github.com/astrand/xclip
     xclip
+    youtube-dl
     zenmap
   )
 
