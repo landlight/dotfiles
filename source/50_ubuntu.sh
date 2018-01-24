@@ -7,7 +7,7 @@ alias install="sudo apt-get install"
 alias remove="sudo apt-get remove"
 alias search="apt-cache search"
 
-alias say=spd-say
+alias say="sudo spd-say"
 
 # Switch between already-downloaded node versions.
 function node_ver() {
