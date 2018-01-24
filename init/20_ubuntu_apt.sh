@@ -35,7 +35,9 @@ apt_packages+=(
   python-pip
   silversearcher-ag
   telnet
+  tmux
   tree
+  whois
 )
 
 apt_packages+=(vim)
