@@ -10,4 +10,8 @@ function rip-youtube-clipboard() {
   rip-youtube $(pbpaste)
 }
 
+function rip-youtube-list() {
+  parallel -a $1 youtube-dl --extract-audio --audio-format mp3
+}
+
 alias ry="rip-youtube-clipboard"

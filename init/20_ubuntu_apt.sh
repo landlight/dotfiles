@@ -32,6 +32,7 @@ apt_packages+=(
   htop
   # https://stedolan.github.io/jq/
   jq
+  parallel
   python-pip
   silversearcher-ag
   telnet
