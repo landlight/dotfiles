@@ -1,6 +1,6 @@
 function backup_grub() {
   sudo rm ~/.dotfiles/config/grub-backup
-  sudo cp -n /etc/default/grub ~/.dotfiles/config/grub-backup
+  sudo cp -n /etc/default/grub ~/.dotfiles/config/grub/backup
 }
 
 function set_grub() {
@@ -11,13 +11,13 @@ function set_grub() {
 }
 
 function restore_grub() {
-  set_grub ~/.dotfiles/config/grub-backup
+  set_grub ~/.dotfiles/config/grub/backup
 }
 
 function set_grub_default() {
-  set_grub ~/.dotfiles/config/grub-default
+  set_grub ~/.dotfiles/config/grub/default
 }
 
 function set_grub_minimal() {
-  set_grub ~/.dotfiles/config/grub-minimal
+  set_grub ~/.dotfiles/config/grub/minimal
 }
