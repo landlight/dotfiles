@@ -39,6 +39,7 @@ apt_packages+=(
   tmux
   tree
   whois
+  speedtest-cli
 )
 
 apt_packages+=(vim)
