@@ -22,9 +22,5 @@ function docker_unroot() {
     newgrp docker
 }
 
-function test_docker() {
-    docker run hello-world
-}
-
 install_docker
 docker_unroot
