@@ -27,7 +27,7 @@ alias grv='gr -v'
 alias grr='git remote rm'
 alias gcl='git clone'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
-alias gcp='gc $(pbpaste)'
+alias gcp='gcl $(pbpaste)'
 
 # Current branch or SHA if detached.
 alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && print "$1$2"'"'"''
