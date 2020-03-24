@@ -19,6 +19,7 @@ function install_docker() {
 function docker_unroot() {
     sudo groupadd docker
     sudo usermod -aG docker $USER
+    newgrp docker
 }
 
 function test_docker() {
