@@ -75,12 +75,6 @@ if is_ubuntu_desktop; then
   apt_source_texts+=("deb https://www.charlesproxy.com/packages/apt/ charles-proxy3 main")
   apt_packages+=(charles-proxy)
 
-  # https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/
-  # apt_keys+=(https://www.virtualbox.org/download/oracle_vbox_2016.asc)
-  # apt_source_files+=(virtualbox)
-  # apt_source_texts+=("deb http://download.virtualbox.org/virtualbox/debian $release_name contrib")
-  # apt_packages+=(virtualbox-5.1)
-
   # http://askubuntu.com/a/190674
   add_ppa ppa:webupd8team/java
   apt_packages+=(oracle-java8-installer)
@@ -129,10 +123,6 @@ if is_ubuntu_desktop; then
 
   # Manage online accounts via "gnome-control-center" in launcher
   apt_packages+=(gnome-control-center gnome-online-accounts)
-
-  # https://github.com/mitchellh/vagrant/issues/7411
-  # deb_installed+=(/usr/bin/vagrant)
-  # deb_sources+=(https://releases.hashicorp.com/vagrant/1.9.2/vagrant_1.9.2_x86_64.deb)
 
   # https://launchpad.net/grub-customizer
   add_ppa ppa:danielrichter2007/grub-customizer
@@ -266,3 +256,18 @@ function install_from_zip() {
 
 # Run anything else that may need to be run.
 type -t other_stuff >/dev/null && other_stuff
+
+function add_microsoft_registry() {
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  }
+
+function install_vscode() {
+  sudo apt-get install apt-transport-https
+  sudo apt-get update
+  sudo apt-get install code # or code-insiders
+}
+
+add_microsoft_registry
+install_vscode

@@ -31,7 +31,6 @@ alias nvmrc='exec nave use $(<.nvmrc)'
 
 # Global npm modules to install.
 npm_globals=(
-  node-inspector
   pushstate-server
   yarn
 )

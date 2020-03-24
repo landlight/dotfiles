@@ -4,6 +4,7 @@
 # Lots of junk goes in here.
 /caches/
 /backups/
+/packages.microsoft.gpg
 
 # Top secret stuff!
 /link/.ssh/id_*
