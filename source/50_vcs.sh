@@ -83,6 +83,16 @@ function ged() {
   cd - > /dev/null
 }
 
+# clone a github repo with multiple local accounts
+
+function git_clone_ssh() {
+  read -p "Github Account:" ghAccount
+  read -p "Repo Owner:" repoOwner
+  read -p "Repo Name:" repoName
+  read -p "Destination:" destination
+  git clone git@github.com-$ghAccount:$repoOwner/$repoName.git $destination
+}
+
 # add a github remote by github username
 function gra() {
   if (( "${#@}" != 1 )); then
