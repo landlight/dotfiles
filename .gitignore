@@ -21,5 +21,8 @@
 # Don't commit tmux plugins, tpm will install them.
 /link/.tmux/plugins
 
+# Don't commit fonts
+/link/.fonts/.uuid
+
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
