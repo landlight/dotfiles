@@ -37,6 +37,25 @@ alias gu-all='eachdir git pull'
 alias gp-all='eachdir git push'
 alias gs-all='eachdir git status'
 
+# add, commit, and push all changes
+function gacp() {
+  if [ -z "$1" ];
+    then
+      echo "Commit message is required."
+      return 0
+  fi
+
+  ga
+  gm "$1"
+
+  if [ -z "$2" ];
+    then
+      gpom
+    else
+      gp $2
+  fi
+}
+
 # Rebase topic branch onto origin parent branch and update local parent branch
 # to match origin parent branch
 function grbo() {
