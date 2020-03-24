@@ -21,6 +21,7 @@ function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
 alias gcb='gc -b'
 alias gbc='gc -b' # Dyslexia
+alias gcbr='git rev-parse --abbrev-ref HEAD'
 alias gr='git remote'
 alias grv='gr -v'
 #alias gra='git remote add'
@@ -39,6 +40,7 @@ alias gs-all='eachdir git status'
 
 # add, commit, and push all changes
 function gacp() {
+  local remote="origin"
   if [ -z "$1" ];
     then
       echo "Commit message is required."
@@ -50,9 +52,10 @@ function gacp() {
 
   if [ -z "$2" ];
     then
-      gpom
+      local current_branch=$(gcbr)
+      gp $remote $current_branch
     else
-      gp "origin" "$2"
+      gp $remote "$2"
   fi
 }
 
