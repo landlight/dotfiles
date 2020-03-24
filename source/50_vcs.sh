@@ -52,7 +52,7 @@ function gacp() {
     then
       gpom
     else
-      gp $2
+      gp "origin" "$2"
   fi
 }
 
