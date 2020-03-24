@@ -22,3 +22,14 @@ fi
 
 # Disable ansible cows }:]
 export ANSIBLE_NOCOWS=1
+
+# create a file from clipboard contents
+function create_file_from_clipboard() {
+  if [ -f "$1" ]
+    then
+      echo "$1 already exists."
+    else
+      touch $1 
+      echo "$(pbpaste)" > "$1"
+  fi
+}
