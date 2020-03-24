@@ -34,6 +34,7 @@ apt_packages+=(
   jq
   parallel
   python-pip
+  python3-pip
   silversearcher-ag
   telnet
   tmux
