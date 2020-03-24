@@ -31,13 +31,9 @@ alias nvmrc='exec nave use $(<.nvmrc)'
 
 # Global npm modules to install.
 npm_globals=(
-  babel-cli
-  eslint
-  grunt-cli
   node-inspector
   pushstate-server
   yarn
-  webpack
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure

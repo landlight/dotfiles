@@ -11,7 +11,7 @@ function rip-youtube-clipboard() {
 }
 
 function rip-youtube-list() {
-  parallel -a $1 youtube-dl --extract-audio --audio-format mp3
+  parallel -a youtube-dl --extract-audio --audio-format mp3 $(pbpaste)
 }
 
 alias ry="rip-youtube-clipboard"
