@@ -34,6 +34,7 @@ npm_globals=(
   pushstate-server
   yarn
   npm-cli-login
+  node-gyp
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure
