@@ -29,7 +29,7 @@ alias grv='gr -v'
 alias grr='git remote rm'
 alias gcl='git clone'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
-alias gcp='gcl $(pbpaste) && cd "$(basename "$1" .git)" && code .'
+alias gcp='gcl $(pbpaste) && code "$(basename "$(pbpaste)" .git)"'
 alias gundo='git rebase -i HEAD~2'
 
 # Current branch or SHA if detached.
