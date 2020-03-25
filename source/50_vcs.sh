@@ -1,6 +1,6 @@
 
 # Git shortcuts
-
+alias vcs='code ~/.dotfiles/source/50_vcs.sh'
 alias g='git'
 function ga() { git add "${@:-.}"; } # Add all files by default
 alias gp='git push'
