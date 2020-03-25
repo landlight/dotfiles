@@ -1,6 +1,7 @@
 
 # Git shortcuts
 alias vcs='code ~/.dotfiles/source/50_vcs.sh'
+alias update-gitignore-global='git config --global core.excludesfile ~/.gitignore_global'
 alias g='git'
 function ga() { git add "${@:-.}"; } # Add all files by default
 alias gp='git push'
@@ -38,6 +39,16 @@ alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && p
 alias gu-all='eachdir git pull'
 alias gp-all='eachdir git push'
 alias gs-all='eachdir git status'
+
+# ignore a file already in a repo
+gignore () {
+  git update-index --assume-unchanged $1
+}
+
+# begin tracking a gignored file
+gtrack () {
+  git update-index --no-assume-unchanged $1
+}
 
 # add, commit, and push all changes
 function gacp() {

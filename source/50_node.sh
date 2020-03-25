@@ -33,6 +33,7 @@ alias nvmrc='exec nave use $(<.nvmrc)'
 npm_globals=(
   pushstate-server
   yarn
+  npm-cli-login
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure
@@ -146,3 +147,7 @@ function npm-reset() {
   echo "" > $(npm config get userconfig)
   echo "npm config reset to default"
 }
+
+export NPMRC="~/.npmrc"
+alias npmrc="code $NPMRC"
+alias npml='source ~/.npmrc && npm-cli-login'
