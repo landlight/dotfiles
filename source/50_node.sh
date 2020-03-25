@@ -139,3 +139,10 @@ function npm-package() {
     npm install foo --save-dev && npm uninstall foo --save-dev
   fi
 }
+
+# reset npm config to default
+function npm-reset() {
+  echo "" > $(npm config get globalconfig)
+  echo "" > $(npm config get userconfig)
+  echo "npm config reset to default"
+}
