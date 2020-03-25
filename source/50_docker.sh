@@ -3,6 +3,7 @@
 ## Shorthand for docker commands
 alias d='docker'
 alias dm='docker-compose'
+alias dmp='dm ps'
 alias dr='docker run -ti $1 $2'
 
 ## Easy logging
