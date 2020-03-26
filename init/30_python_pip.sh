@@ -7,6 +7,7 @@ python3 -m pip install --upgrade pip
 pip_packages=(
   powerline-status
   docker-compose
+  youtube-dl
 )
 
 installed_pip_packages="$(pip list 2>/dev/null | awk '{print $1}')"
