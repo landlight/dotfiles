@@ -14,4 +14,8 @@ function rip-youtube-list() {
   parallel -a youtube-dl --extract-audio --audio-format mp3 $(pbpaste)
 }
 
+function update-youtube-dl() {
+  pip3 install --upgrade youtube-dl
+}
+
 alias ry="rip-youtube-clipboard"
