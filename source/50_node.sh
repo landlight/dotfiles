@@ -35,6 +35,7 @@ npm_globals=(
   yarn
   npm-cli-login
   node-gyp
+  docusaurus-init
 )
 
 # Because "rm -rf node_modules && npm install" takes WAY too long. Not sure
