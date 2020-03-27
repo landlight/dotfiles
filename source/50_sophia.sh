@@ -1,6 +1,6 @@
-local SOPHIA_HOME=~/Workspace/Sophia
-local TDPK_DOCKER_COMPOSE_ENV=$SOPHIA_HOME/env/docker-compose.env
-local TDPK_FE_ENV=$SOPHIA_HOME/env/.env
+export SOPHIA_HOME=~/Workspace/Sophia
+export TDPK_DOCKER_COMPOSE_ENV=$SOPHIA_HOME/env/docker-compose.env
+export TDPK_FE_ENV=$SOPHIA_HOME/env/.env
 alias sophia="cd $SOPHIA_HOME"
 alias sophia_docs="cd $SOPHIA_HOME/documentation"
 alias open_sophia_docs="sophia_docs && gpu"
@@ -27,4 +27,8 @@ function scpj() {
 }
 function sshj() {
     sshj_generator jump $@
+}
+
+function sophia-restore-db () {
+    rethinkdb-restore --force --password-file $SOPHIA_HOME/dbDump/password.txt $SOPHIA_HOME/dbDump/rethinkdb_dump.tar.gz
 }
