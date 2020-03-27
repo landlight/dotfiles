@@ -45,3 +45,17 @@ mkdir -p $DOTFILES/caches/z
 _Z_NO_PROMPT_COMMAND=1
 _Z_DATA=$DOTFILES/caches/z/z
 . $DOTFILES/vendor/z/z.sh
+
+export DEFAULT_MAX_USER_WATCHES=524288
+
+# Increasing the amount of inotify watchers
+# https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
+function set_max_user_watches() {
+    local NEW_LIMIT=$1
+    sudo sysctl fs.inotify.max_user_watches=$NEW_LIMIT
+    sudo sysctl -p
+}
+
+function get_current_max_user_watches() {
+    sudo cat /proc/sys/fs/inotify/max_user_watches
+}

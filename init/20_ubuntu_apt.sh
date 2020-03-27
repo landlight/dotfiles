@@ -127,10 +127,6 @@ if is_ubuntu_desktop; then
   add_ppa ppa:danielrichter2007/grub-customizer
   apt_packages+=(grub-customizer)
 
-  # https://support.gitkraken.com/how-to-install
-  deb_installed+=(/usr/bin/gitkraken)
-  deb_sources+=(https://release.gitkraken.com/linux/gitkraken-amd64.deb)
-
   # https://discordapp.com/download
   deb_installed+=(/usr/bin/discord)
   deb_sources+=("https://discordapp.com/api/download?platform=linux&format=deb")
