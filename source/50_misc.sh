@@ -33,3 +33,8 @@ function create_file_from_clipboard() {
       echo "$(pbpaste)" > "$1"
   fi
 }
+
+# find process running on a given port
+function find_process_running_on_port() {
+  lsof -i :$1
+}

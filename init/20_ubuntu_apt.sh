@@ -41,6 +41,7 @@ apt_packages+=(
   tree
   whois
   speedtest-cli
+  sqlitebrowser
 )
 
 apt_packages+=(vim)
