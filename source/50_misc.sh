@@ -38,3 +38,9 @@ function create_file_from_clipboard() {
 function find_process_running_on_port() {
   lsof -i :$1
 }
+
+# gets the current unix epoch
+get_timestamp() {
+    local timestamp=$(date +%s)
+    echo $timestamp
+}
