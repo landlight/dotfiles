@@ -31,6 +31,7 @@ alias gcl='git clone'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 alias gcp='gcl $(pbpaste) && code "$(basename "$(pbpaste)" .git)"'
 alias gundo='git rebase -i HEAD~2'
+alias gsclears='git stash clear'
 
 # Current branch or SHA if detached.
 alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && print "$1$2"'"'"''
@@ -58,6 +59,11 @@ gdelb () {
 # delete remote branch
 gdelbr () {
     git push origin --delete $1
+}
+
+# delete local stash
+gdelst () {
+    git stash drop $1
 }
 
 # add, commit, and push all changes
