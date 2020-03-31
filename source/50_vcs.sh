@@ -50,6 +50,16 @@ gtrack () {
   git update-index --no-assume-unchanged $1
 }
 
+# delete local branch
+gdelb () {
+    git branch -D $1
+}
+
+# delete remote branch
+gdelbr () {
+    git push origin --delete $1
+}
+
 # add, commit, and push all changes
 function gacp() {
   local remote="origin"
