@@ -35,8 +35,8 @@ function create_file_from_clipboard() {
 }
 
 # find process running on a given port
-function find_process_running_on_port() {
-  lsof -i :$1
+function find_and_kill_process_on_port() {
+  lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs kill
 }
 
 # gets the current unix epoch
