@@ -16,6 +16,7 @@ alias dev='docker stop $(basename $(pwd)) && yarn dev'
 
 ## Commands to help us cleanup our docker stack
 alias drm='docker rm $(docker ps -a -q)'
+alias drmvol='docker volume rm $(docker volume ls -qf dangling=true)'
 alias dstop='docker stop $(docker ps -a -q)'
 alias dprune='docker system prune -a; docker images purge'
 alias dclean='sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"'
