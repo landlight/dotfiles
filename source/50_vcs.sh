@@ -229,23 +229,11 @@ function gstat() {
   unset IFS
 }
 
-# OSX-specific Git shortcuts
-if is_osx; then
-  alias gdk='git ksdiff'
-  alias gdkc='gdk --cached'
-  function gt() {
-    local path repo
-    {
-      pushd "${1:-$PWD}"
-      path="$PWD"
-      repo="$(git rev-parse --show-toplevel)"
-      popd
-    } >/dev/null 2>&1
-    if [[ -e "$repo" ]]; then
-      echo "Opening git repo $repo."
-      gittower "$repo"
-    else
-      echo "Error: $path is not a git repo."
-    fi
-  }
-fi
+# remove a git submodule
+function git_remove_submodule() {
+  local PATH_TO_SUBMODULE=$1
+  git submodule deinit $PATH_TO_SUBMODULE
+  git rm $PATH_TO_SUBMODULE
+  git commit-m "Removed submodule "
+  rm -rf .git/modules/$PATH_TO_SUBMODULE
+}
