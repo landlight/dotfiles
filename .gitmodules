@@ -16,24 +16,3 @@
 [submodule "link/.tmux/plugins/tpm"]
 	path = link/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "link/.rbenv/plugins/rbenv-vars"]
-	path = link/.rbenv/plugins/rbenv-vars
-	url = https://github.com/sstephenson/rbenv-vars.git
-[submodule "link/.rbenv/plugins/ruby-build"]
-	path = link/.rbenv/plugins/ruby-build
-	url = https://github.com/sstephenson/ruby-build.git
-[submodule "link/.rbenv/plugins/rbenv-whatis"]
-	path = link/.rbenv/plugins/rbenv-whatis
-	url = https://github.com/rkh/rbenv-whatis.git
-[submodule "link/.rbenv/plugins/rbenv-use"]
-	path = link/.rbenv/plugins/rbenv-use
-	url = https://github.com/rkh/rbenv-use.git
-[submodule "link/.rbenv/plugins/rbenv-update"]
-	path = link/.rbenv/plugins/rbenv-update
-	url = https://github.com/rkh/rbenv-update.git
-[submodule "link/.rbenv/plugins/rbenv-default-gems"]
-	path = link/.rbenv/plugins/rbenv-default-gems
-	url = https://github.com/sstephenson/rbenv-default-gems.git
-[submodule "link/.rbenv/plugins/rbenv-gem-rehash"]
-	path = link/.rbenv/plugins/rbenv-gem-rehash
-	url = https://github.com/sstephenson/rbenv-gem-rehash.git
