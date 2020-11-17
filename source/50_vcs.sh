@@ -234,6 +234,6 @@ function git_remove_submodule() {
   local PATH_TO_SUBMODULE=$1
   git submodule deinit $PATH_TO_SUBMODULE
   git rm $PATH_TO_SUBMODULE
-  git commit-m "Removed submodule "
+  git commit -m "Removed submodule "
   rm -rf .git/modules/$PATH_TO_SUBMODULE
 }
