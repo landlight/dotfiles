@@ -154,3 +154,7 @@ function npm-reset() {
 export NPMRC="~/.npmrc"
 alias npmrc="code $NPMRC"
 alias npml='source ~/.npmrc && npm-cli-login'
+
+function yarn_upgrade() {
+  curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+}

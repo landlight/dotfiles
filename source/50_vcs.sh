@@ -6,8 +6,10 @@ alias g='git'
 function ga() { git add "${@:-.}"; } # Add all files by default
 alias gp='git push'
 alias gpom="gp origin master"
+alias gpoh="gp origin HEAD"
 alias gpa='gp --all'
 alias gu='git pull'
+alias guh='gu origin HEAD'
 alias gl='git log'
 alias gg='gl --decorate --oneline --graph --date-order --all'
 alias gs='git status'
@@ -17,7 +19,9 @@ alias gdc='gd --cached'
 alias gm='git commit -m'
 alias gma='git commit -am'
 alias gb='git branch'
-alias gba='git branch -a'
+alias gba='gb -a'
+alias gbd="gb -D"
+alias gbl="gb -l"
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
 alias gcb='gc -b'
@@ -49,11 +53,6 @@ gignore () {
 # begin tracking a gignored file
 gtrack () {
   git update-index --no-assume-unchanged $1
-}
-
-# delete local branch
-gdelb () {
-    git branch -D $1
 }
 
 # delete remote branch
@@ -170,10 +169,10 @@ AWK
 function gfu() {
   local n="${@:-1}"
   n=$((n-1))
-  git web--browse  $(git log -n 1 --skip=$n --pretty=oneline | awk "{printf \"$(gurl)/commit/%s\", substr(\$1,1,7)}")
+  git web--browse --browser=$BROWSER  $(git log -n 1 --skip=$n --pretty=oneline | awk "{printf \"$(gurl)/commit/%s\", substr(\$1,1,7)}")
 }
 # open current branch + path in GitHub, in the browser.
-alias gpu='git web--browse $(gurlp)'
+alias gpu='git web--browse --browser=$BROWSER $(gurlp)'
 
 # Just the last few commits, please!
 for n in {1..5}; do alias gf$n="gf -n $n"; done

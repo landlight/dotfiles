@@ -51,10 +51,12 @@ export DEFAULT_MAX_USER_WATCHES=524288
 # Increasing the amount of inotify watchers
 # https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
 function set_max_user_watches() {
-    local NEW_LIMIT=$DEFAULT_MAX_USER_WATCHES
+    local NEW_LIMIT=$1
     sudo sysctl fs.inotify.max_user_watches=$NEW_LIMIT
     sudo sysctl -p
 }
+
+alias smuw="set_max_user_watches $DEFAULT_MAX_USER_WATCHES"
 
 function get_current_max_user_watches() {
     sudo cat /proc/sys/fs/inotify/max_user_watches
