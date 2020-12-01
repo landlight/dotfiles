@@ -60,7 +60,7 @@ _Tested in Ubuntu 16.04 LTS_
 #### Ubuntu
 
 ```sh
-bash -c "$(wget -qO- https://raw.github.com/austinrivas/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(wget -qO- https://raw.github.com/landlight/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ## Aliases and Functions
