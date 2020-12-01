@@ -91,9 +91,10 @@ SVN repos display as **[rev1:rev2]** where rev1 and rev2 are:
 <https://github.com/gf3/dotfiles>  
 <https://github.com/mathiasbynens/dotfiles>  
 <https://github.com/cowboy/dotfiles>
+<https://github.com/austinrivas/dotfiles>
 
 ## License
-Copyright (c) 2017 Austin Rivas
+Copyright (c) 2020 Chit Khine
 Licensed under the MIT license.
 
 Many thanks to "Cowboy" Ben Alman, who inspired this project and provided the basis on which it stands.
